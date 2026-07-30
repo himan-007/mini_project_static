@@ -1,89 +1,109 @@
-*{
+/* ==========================================================================
+   GLOBAL RESET
+   ========================================================================== */
+* {
     margin: 0;
     padding: 0;
-      font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-.main_box{
-    background-image:url("photo.jpg") ;
+/* ==========================================================================
+   MAIN BACKGROUND
+   ========================================================================== */
+.main_box {
+    background-image: url("photo.jpg");
     height: 100vh;
     background-size: cover;
 }
 
-.btn_one i{
-    color:white;
+/* ==========================================================================
+   TOGGLE BUTTON — OPEN (hamburger icon)
+   ========================================================================== */
+.btn_one i {
+    color: white;
     font-size: 30px;
     font-weight: 700;
     position: absolute;
     left: 16px;
     line-height: 60px;
     cursor: pointer;
-     transition: all 0.5s linear;
+    transition: all 0.5s linear; /* smooth fade/resize on toggle */
 }
 
-.sidebar_menu{
+/* ==========================================================================
+   SIDEBAR CONTAINER
+   ========================================================================== */
+.sidebar_menu {
     position: fixed;
-    left: -300px;
+    left: -300px; /* hidden off-screen by default */
     height: 100vh;
     width: 300px;
-    background-color:rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* frosted glass effect */
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
-    transition: all 0.5s linear;
-
+    transition: all 0.5s linear; /* slide-in animation */
 }
-.sidebar_menu .logo{
+
+/* ---- Sidebar Logo/Header ---- */
+.sidebar_menu .logo {
     position: absolute;
     width: 100%;
     line-height: 60px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
     height: 60px;
-
 }
 
-.sidebar_menu .logo a{
+.sidebar_menu .logo a {
     position: absolute;
     left: 50px;
-    color:white;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
 }
 
-.sidebar_menu .btn_two i{
+/* ==========================================================================
+   TOGGLE BUTTON — CLOSE (visible once sidebar is open)
+   ========================================================================== */
+.sidebar_menu .btn_two i {
     color: grey;
     font-size: 25px;
     position: absolute;
     left: 275px;
     line-height: 60px;
-    opacity: 0;
+    opacity: 0; /* hidden until sidebar opens */
     cursor: pointer;
-     transition: all 0.5s linear;
-
+    transition: all 0.5s linear;
 }
 
-.sidebar_menu .menu{
-    /* color: white; */
+/* ==========================================================================
+   SIDEBAR MENU LIST
+   ========================================================================== */
+.sidebar_menu .menu {
     position: absolute;
     width: 100%;
     top: 80px;
 }
 
-.sidebar_menu .menu li{
+.sidebar_menu .menu li {
     margin-top: 6px;
     padding: 14px 20px;
 }
 
-.sidebar_menu .menu i,a{
-    color:white;
+.sidebar_menu .menu i,
+a {
+    color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
-.sidebar_menu .menu i{
+.sidebar_menu .menu i {
     padding-right: 8px;
 }
 
-.sidebar_menu .social_media{
+/* ==========================================================================
+   SOCIAL MEDIA ICONS (footer of sidebar)
+   ========================================================================== */
+.sidebar_menu .social_media {
     color: white;
     opacity: 0.5;
     position: absolute;
@@ -91,41 +111,54 @@
     bottom: 50px;
 }
 
-.sidebar_menu .social_media i{
+.sidebar_menu .social_media i {
     color: white;
     opacity: 0.5;
     padding: 0 5px;
 }
 
-#check{
+/* ==========================================================================
+   HIDDEN CHECKBOX (drives the toggle via the CSS checkbox hack)
+   ========================================================================== */
+#check {
     display: none;
 }
 
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
 .sidebar_menu .menu li:hover {
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5); 
-}
-.btn_one i:hover{
-    font-size: 40px;
-
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
-.btn_two i:hover{
+.btn_one i:hover {
+    font-size: 40px; /* grows on hover */
+}
+
+.btn_two i:hover {
     font-size: 30px;
 }
 
-.sidebar_menu .social_media i:hover{
+.sidebar_menu .social_media i:hover {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.1); /* subtle pop effect */
 }
 
-#check:checked ~ .sidebar_menu{
+/* ==========================================================================
+   CHECKBOX-DRIVEN STATE CHANGES (no JavaScript!)
+   ========================================================================== */
+
+/* When checkbox is checked -> slide sidebar into view */
+#check:checked ~ .sidebar_menu {
     left: 0px;
 }
 
-#check:checked ~ .btn_one i{
+/* Hide the open (hamburger) button once sidebar is active */
+#check:checked ~ .btn_one i {
     opacity: 0;
 }
 
-#check:checked ~ .sidebar_menu .btn_two i{
+/* Reveal the close button once sidebar is active */
+#check:checked ~ .sidebar_menu .btn_two i {
     opacity: 1;
 }
