@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Project</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome (icon library used for menu + social icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,24 +25,36 @@
   </head>
   <body>
     <div class="main_box">
+      <!-- ==========================================================
+           HIDDEN CHECKBOX — drives the sidebar open/close state
+           via the CSS checkbox hack (no JavaScript needed)
+           ========================================================== -->
       <input type="checkbox" id="check" />
+
+      <!-- Hamburger icon: visible when sidebar is closed -->
       <div class="btn_one">
         <label for="check">
           <i class="fa-solid fa-bars"></i>
         </label>
       </div>
 
+      <!-- ==========================================================
+           SIDEBAR
+           ========================================================== -->
       <div class="sidebar_menu">
+        <!-- Logo / Brand name -->
         <div class="logo">
           <a href="#">Apna College</a>
         </div>
 
+        <!-- Close (X) icon: visible when sidebar is open -->
         <div class="btn_two">
           <label for="check">
             <i class="fa-solid fa-xmark"></i>
           </label>
         </div>
 
+        <!-- ---- Navigation Menu Items ---- -->
         <div class="menu">
           <ul>
             <li>
@@ -71,11 +88,12 @@
           </ul>
         </div>
 
+        <!-- ---- Social Media Links (footer of sidebar) ---- -->
         <div class="social_media">
           <ul>
-            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
           </ul>
         </div>
