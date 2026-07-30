@@ -1,6 +1,7 @@
 Animated Sidebar Menu — Mini Project**(Vanilla HTML and CSS)**
 
-Project is live( https://himan-007.github.io/mini_project_static/)
+Project is live( https://himan-007.github.io/mini_project_static/) 
+
 A responsive sidebar navigation menu built with pure HTML & CSS, showcasing advanced CSS techniques like smooth transitions, hover animations, and interactive UI effects — no JavaScript required
 This project is a sleek, dark-themed sidebar menu overlaying a full-screen background image. It's designed as a practice project to demonstrate advanced CSS concepts — layout, transitions, animations, and hover interactivity — all achieved without a single line of JavaScript.
 
